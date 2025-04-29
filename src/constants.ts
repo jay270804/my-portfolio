@@ -20,3 +20,7 @@ export const FEATURED_QUOTE = {
   text: "I dream in code, but my nightmares are in production.",
   author: "Prod Panic"
 }
+
+export const PROJECT_BUTTON_CODE_TEXT = "Code <~~>"
+
+export const TOPIC_PROJECTS_BORDER_LENGTH = 700;
