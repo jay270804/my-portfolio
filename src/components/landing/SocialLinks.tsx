@@ -4,8 +4,8 @@ import { SOCIAL_LINKS } from "@/constants";
 
 export function SocialLinks() {
   return (
-    <div className="fixed top-0 z-49 left-5 ">
-    <div className="w-[1px] h-44 bg-gray-400 mx-auto mb-2"></div>
+    <div className="hidden md:block fixed top-0 z-49 left-5 ">
+      <div className="w-[1px] h-44 bg-gray-400 mx-auto mb-2"></div>
       <div className="flex flex-col items-center gap-2">
         {SOCIAL_LINKS.map((link, index) => (
           <Link
