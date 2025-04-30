@@ -19,11 +19,17 @@ export function TopicHeader({
       <div className="flex items-center gap-1 text-2xl font-bold">
         <span className="text-primary">#</span>
         <h2 className="text-white mr-2">{topic}</h2>
-        <div className="h-[1.5px] bg-primary hidden md:block" style={{ width: borderLength }}></div>
+        <div
+          className="h-[1.5px] bg-primary hidden md:block"
+          style={{ width: borderLength }}
+        ></div>
       </div>
       {showViewAll && (
         <Link href={viewAllLink}>
-          <Button variant="outline" className="text-white font-bold hover:text-primary">
+          <Button
+            variant="outline"
+            className="text-white font-bold hover:text-primary"
+          >
             View All {"~~>"}
           </Button>
         </Link>

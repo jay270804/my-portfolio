@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {PROJECT_BUTTON_CODE_TEXT} from "@/constants"
+import { PROJECT_BUTTON_CODE_TEXT } from "@/constants";
 
 interface ProjectCardProps {
   title: string;
@@ -40,12 +40,12 @@ export function ProjectCard({
           ))}
         </div>
         <div className="flex flex-col gap-3 p-4">
-        <h3 className="text-2xl font-semibold text-white">{title}</h3>
-        <p className="text-md text-gray-400">{description}</p>
+          <h3 className="text-2xl font-semibold text-white">{title}</h3>
+          <p className="text-md text-gray-400">{description}</p>
           <Link
             href={projectUrl}
             className="w-1/3 md:w-1/4 text-center font-semibold px-3 py-2 tracking-tighter border border-primary text-sm hover:bg-primary/10 transition-colors duration-300"
-            >
+          >
             {PROJECT_BUTTON_CODE_TEXT}
           </Link>
         </div>

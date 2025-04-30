@@ -23,4 +23,5 @@ export const FEATURED_QUOTE = {
 
 export const PROJECT_BUTTON_CODE_TEXT = "Code <~~>"
 
-export const TOPIC_PROJECTS_BORDER_LENGTH = 700;
+export const TOPIC_PROJECTS_BORDER_LENGTH = 800
+export const TOPIC_SKILLS_BORDER_LENGTH = 600

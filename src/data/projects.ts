@@ -16,7 +16,7 @@ export const projects: Project[] = [
   },
   {
     title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with real-time inventory management,A full-stack e-commerce platform with real-time inventory managementA full-stack e-commerce platform with real-time inventory management",
+    description: "A full-stack e-commerce platform with real-time inventory management",
     imageUrl: "/projects/dummy-project-image.png",
     projectUrl: "/projects/ecommerce",
     technologies: ["React", "Node.js", "MongoDB", "Express"]
