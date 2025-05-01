@@ -18,7 +18,7 @@ export function TopicHeader({
     <div className="flex items-center justify-between mb-6 md:mb-10">
       <div className="flex items-center gap-1 text-2xl font-bold">
         <span className="text-primary">#</span>
-        <h2 className="text-white mr-2">{topic}</h2>
+        <h2 className="text-white mr-2 tracking-wider">{topic}</h2>
         <div
           className="h-[1.5px] bg-primary hidden md:block"
           style={{ width: borderLength }}
@@ -28,9 +28,9 @@ export function TopicHeader({
         <Link href={viewAllLink}>
           <Button
             variant="outline"
-            className="text-white font-bold hover:text-primary"
+            className="text-white tracking-wider border-none font-bold hover:text-primary"
           >
-            View All {"~~>"}
+            View All {"⇝"}
           </Button>
         </Link>
       )}

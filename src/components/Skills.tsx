@@ -77,14 +77,6 @@ export const Skills: FC<SkillsProps> = ({ skills }) => {
         <div className="hidden md:block md:col-span-3 md:col-start-5 md:row-start-3"></div>
         <div className="hidden md:block md:col-span-3 md:col-start-5 md:row-start-6"></div>
 
-        {/* Mobile decorative element */}
-        {/* <div className="col-span-12 md:hidden mx-auto my-6">
-          <div className="relative">
-            <div className="absolute -inset-1 rounded-lg bg-primary/30 blur-sm"></div>
-            <div className="h-0.5 w-24 bg-primary relative"></div>
-          </div>
-        </div>
- */}
         {/* Skill cards - 2 per row on mobile, grid on desktop */}
         {Object.keys(categoryMapping).map((category, index) => {
           if (!skillsByCategory[category]) return null;

@@ -4,10 +4,17 @@ import { Quote } from "@/components/landing/Quote";
 import { TopicHeader } from "@/components/landing/TopicHeader";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Skills } from "@/components/Skills";
+import { AboutMe } from "@/components/landing/AboutMe";
 import { projects, type Project } from "@/data/projects";
 import { skills } from "@/data/skills";
 import "./globals.css";
-import { TOPIC_PROJECTS_BORDER_LENGTH, TOPIC_SKILLS_BORDER_LENGTH } from "@/constants";
+import {
+  TOPIC_ABOUT_ME_BORDER_LENGTH,
+  TOPIC_PROJECTS_BORDER_LENGTH,
+  TOPIC_SKILLS_BORDER_LENGTH,
+  TOPIC_CONTACTS_BORDER_LENGTH,
+} from "@/constants";
+import { Contacts } from "@/components/landing/Contacts";
 
 export default function Home() {
   return (
@@ -41,6 +48,24 @@ export default function Home() {
             borderLength={TOPIC_SKILLS_BORDER_LENGTH}
           />
           <Skills skills={skills} />
+        </section>
+
+        <section className="space-y-8 w-11/12 md:-mt-8 md:w-9/10 mx-auto">
+          <TopicHeader
+            topic="About me"
+            showViewAll={false}
+            borderLength={TOPIC_ABOUT_ME_BORDER_LENGTH}
+          />
+          <AboutMe />
+        </section>
+
+        <section className="space-y-8 w-11/12 md:w-9/10 mx-auto">
+          <TopicHeader
+            topic={"Contacts"}
+            showViewAll={false}
+            borderLength={TOPIC_CONTACTS_BORDER_LENGTH}
+          />
+          <Contacts />
         </section>
       </main>
     </div>
