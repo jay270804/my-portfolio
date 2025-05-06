@@ -6,12 +6,15 @@ import {
   ABOUT_ME_BIO_2,
   ABOUT_ME_VIDEO_PATH,
   ABOUT_ME_VIDEO_POSTER,
-  CONTACT_BUTTON_TEXT,
-  CONTACT_BUTTON_LINK,
   ABOUT_ME_BUTTON_TEXT,
+  ABOUT_ME_BUTTON_LINK,
 } from "@/constants";
 
-export const AboutMe = () => {
+interface AboutMeProps {
+  showButton?: boolean;
+}
+
+export const AboutMe = ({ showButton = false }: AboutMeProps) => {
   return (
     <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between md:items-center gap-8">
       {/* Left column - Bio text */}
@@ -22,12 +25,14 @@ export const AboutMe = () => {
 
         <p className="text-gray-400">{ABOUT_ME_BIO_2}</p>
 
-        <Link
-          href={CONTACT_BUTTON_LINK}
-          className="w-fit block font-semibold px-3 py-2 tracking-wider border border-primary text-md hover:bg-primary/10 transition-colors duration-300"
-        >
-          {ABOUT_ME_BUTTON_TEXT}
-        </Link>
+        {showButton && (
+          <Link
+            href={ABOUT_ME_BUTTON_LINK}
+            className="w-fit block font-semibold px-3 py-2 tracking-wider border border-primary text-md hover:bg-primary/10 transition-colors duration-300"
+          >
+            {ABOUT_ME_BUTTON_TEXT}
+          </Link>
+        )}
       </div>
 
       {/* Right column - Video with dots pattern */}

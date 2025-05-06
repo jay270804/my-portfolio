@@ -10,12 +10,18 @@ import {
 } from "@/constants";
 import Image from "next/image";
 
-export function Contacts() {
+interface ContactsProps {
+  description?: string;
+}
+
+export function Contacts({
+  description = CONTACTS_DESCRIPTION,
+}: ContactsProps) {
   return (
     <div className="flex flex-col md:flex-row w-full md:w-full mx-auto gap-8 md:gap-0 justify-between items-center md:items-start mt-8">
       {/* Left: Description */}
       <p className="text-gray-400 text-lg max-w-xl whitespace-pre-line">
-        {CONTACTS_DESCRIPTION}
+        {description}
       </p>
       {/* Right: Contact Card */}
       <div className="border border-gray-400 bg-transparent px-8 py-6 min-w-[270px] max-w-xs flex flex-col gap-4">

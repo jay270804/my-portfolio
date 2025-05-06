@@ -22,6 +22,8 @@ export const FEATURED_QUOTE = {
 }
 
 export const PROJECT_BUTTON_CODE_TEXT = "Code ↭"
+export const PROJECT_BUTTON_LIVE_TEXT = "Live ↭"
+export const PROJECT_BUTTON_GITHUB_TEXT = "Github ↭"
 
 export const TOPIC_PROJECTS_BORDER_LENGTH = 800
 export const TOPIC_SKILLS_BORDER_LENGTH = 600
@@ -35,6 +37,7 @@ export const ABOUT_ME_BIO_2 = "Transforming my creativity and knowledge into web
 export const ABOUT_ME_VIDEO_PATH = "/about-me-video/about-me.mp4"
 export const ABOUT_ME_VIDEO_POSTER = "/about-me-poster.jpg"
 export const ABOUT_ME_BUTTON_TEXT = "Read more →"
+export const ABOUT_ME_BUTTON_LINK = "/about-me"
 
 // Contacts section constants
 export const CONTACTS_DESCRIPTION = "I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me";
@@ -50,3 +53,6 @@ export const FOOTER_NAME = "Jay";
 export const FOOTER_EMAIL = CONTACTS_EMAIL_LABEL;
 export const FOOTER_EMAIL_LINK = CONTACTS_EMAIL_LINK;
 export const FOOTER_SUBTITLE = "LLM and Full Stack Developer...";
+
+export const FUN_FACTS_PATTERN_IMAGE = "/fun-facts-pattern.svg";
+export const CONTACTS_PAGE_DESCRIPTION = "I'm interested in freelance opportunities. However, if you have other request or question, don't hesitate to contact me";

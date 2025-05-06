@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PROJECT_BUTTON_CODE_TEXT } from "@/constants";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl?: string;
   projectUrl: string;
   technologies: string[];
+  buttonText?: string;
 }
 
 export function ProjectCard({
@@ -16,18 +16,21 @@ export function ProjectCard({
   imageUrl,
   projectUrl,
   technologies,
+  buttonText = "View",
 }: ProjectCardProps) {
   return (
     <div className="group overflow-hidden border border-gray-400 bg-transparent transition-all hover:border-primary">
-      <div className="w-full h-48 overflow-hidden">
-        <Image
-          src={imageUrl}
-          alt={title}
-          width={500}
-          height={300}
-          className="object-cover h-full"
-        />
-      </div>
+      {imageUrl && (
+        <div className="w-full h-48 overflow-hidden">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={500}
+            height={300}
+            className="object-cover h-full"
+          />
+        </div>
+      )}
       <div className="space-y-2">
         <div className="flex flex-wrap gap-2 border border-gray-400 border-x-0">
           {technologies.map((tech) => (
@@ -44,9 +47,11 @@ export function ProjectCard({
           <p className="text-md text-gray-400">{description}</p>
           <Link
             href={projectUrl}
-            className="w-1/3 md:w-1/4 text-center font-semibold px-3 py-2 tracking-tighter border border-primary text-sm hover:bg-primary/10 transition-colors duration-300"
+            className="w-fit text-center font-semibold px-3 py-2 tracking-wider border border-primary text-sm hover:bg-primary/10 transition-colors duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {PROJECT_BUTTON_CODE_TEXT}
+            {buttonText}
           </Link>
         </div>
       </div>

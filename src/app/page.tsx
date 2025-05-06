@@ -19,7 +19,7 @@ import { Contacts } from "@/components/landing/Contacts";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-white relative font-mira">
-      <SocialLinks />
+      
       <main className="container mx-auto px-4 md:px-8 py-10 md:py-18 flex flex-col gap-20 md:gap-32">
         <Introduction />
         <div className="mx-auto">
@@ -34,7 +34,7 @@ export default function Home() {
             borderLength={TOPIC_PROJECTS_BORDER_LENGTH}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
-            {projects.map((project: Project) => (
+            {projects.filter((project:Project, index: number) => index < 3).map((project: Project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
             showViewAll={false}
             borderLength={TOPIC_ABOUT_ME_BORDER_LENGTH}
           />
-          <AboutMe />
+          <AboutMe showButton={true} />
         </section>
 
         <section className="space-y-8 w-11/12 md:w-9/10 mx-auto">
