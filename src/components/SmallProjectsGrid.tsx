@@ -16,6 +16,8 @@ export function SmallProjectsGrid({ projects = smallProjects }: SmallProjectsGri
           technologies={project.technologies}
           projectUrl={project.projectUrl}
           buttonText={project.buttonText}
+          secondaryButtonText={project.secondaryButtonText}
+          secondaryProjectUrl={project.secondaryProjectUrl}
         />
       ))}
     </div>

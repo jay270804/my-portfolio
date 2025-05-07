@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { STYLE_PRIMARY_COLOR, STYLE_BORDER_COLOR, STYLE_TEXT_COLOR } from "@/constants";
 
 interface ProjectCardProps {
   title: string;
@@ -8,6 +9,8 @@ interface ProjectCardProps {
   projectUrl: string;
   technologies: string[];
   buttonText?: string;
+  secondaryButtonText?: string;
+  secondaryProjectUrl?: string;
 }
 
 export function ProjectCard({
@@ -17,9 +20,16 @@ export function ProjectCard({
   projectUrl,
   technologies,
   buttonText = "View",
+  secondaryButtonText,
+  secondaryProjectUrl,
 }: ProjectCardProps) {
+  const cardClass = `group overflow-hidden border border-${STYLE_BORDER_COLOR} bg-transparent transition-all hover:border-${STYLE_PRIMARY_COLOR}`;
+  const techClass = `bg-transparent px-3 py-1.5 text-4 text-${STYLE_TEXT_COLOR}`;
+  const buttonClass = `w-fit text-center font-semibold px-3 py-2 tracking-wider border border-${STYLE_PRIMARY_COLOR} text-sm hover:bg-${STYLE_PRIMARY_COLOR}/10 transition-colors duration-300`;
+  const descriptionClass = `text-md text-${STYLE_TEXT_COLOR} font-semibold`;
+
   return (
-    <div className="group overflow-hidden border border-gray-400 bg-transparent transition-all hover:border-primary">
+    <div className={cardClass}>
       {imageUrl && (
         <div className="w-full h-48 overflow-hidden">
           <Image
@@ -32,11 +42,11 @@ export function ProjectCard({
         </div>
       )}
       <div className="space-y-2">
-        <div className="flex flex-wrap gap-2 border border-gray-400 border-x-0">
+        <div className={`flex flex-wrap gap-2 border border-${STYLE_BORDER_COLOR} border-x-0`}>
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="bg-transparent px-3 py-1.5 text-4 text-gray-400"
+              className={techClass}
             >
               {tech}
             </span>
@@ -44,15 +54,28 @@ export function ProjectCard({
         </div>
         <div className="flex flex-col gap-3 p-4">
           <h3 className="text-2xl font-semibold text-white">{title}</h3>
-          <p className="text-md text-gray-400">{description}</p>
-          <Link
-            href={projectUrl}
-            className="w-fit text-center font-semibold px-3 py-2 tracking-wider border border-primary text-sm hover:bg-primary/10 transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {buttonText}
-          </Link>
+          <p className={descriptionClass}>{description}</p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href={projectUrl}
+              className={buttonClass}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {buttonText}
+            </Link>
+
+            {secondaryButtonText && secondaryProjectUrl && (
+              <Link
+                href={secondaryProjectUrl}
+                className={buttonClass}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {secondaryButtonText}
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

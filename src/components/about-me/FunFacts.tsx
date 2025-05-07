@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { funFacts } from '@/data/funFacts';
-import { FUN_FACTS_PATTERN_IMAGE } from '@/constants';
+import { FUN_FACTS_PATTERN_IMAGE, STYLE_PRIMARY_COLOR, STYLE_BORDER_COLOR, STYLE_TEXT_COLOR } from '@/constants';
 
 export const FunFacts: FC = () => {
   // Function to process text and make parts between * * bold
@@ -18,15 +18,18 @@ export const FunFacts: FC = () => {
     });
   };
 
+  const factClass = `inline-block border border-${STYLE_BORDER_COLOR} bg-transparent transition-all hover:border-${STYLE_PRIMARY_COLOR} px-3 py-2`;
+  const textClass = `text-${STYLE_TEXT_COLOR} tracking-wider text-md break-words`;
+
   return (
     <div className="w-full flex items-start justify-between">
-      <div className="flex flex-wrap gap-4 max-w-[60%]">
+      <div className="flex flex-wrap gap-4 w-full md:max-w-[60%]">
         {funFacts.map((fact, index) => (
           <div
             key={index}
-            className="inline-block border border-gray-400 bg-transparent transition-all hover:border-primary px-3 py-2"
+            className={factClass}
           >
-            <p className="text-gray-400 tracking-wider text-md whitespace-nowrap">{formatText(fact)}</p>
+            <p className={textClass}>{formatText(fact)}</p>
           </div>
         ))}
       </div>

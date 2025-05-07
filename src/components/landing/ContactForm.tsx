@@ -1,6 +1,17 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import {
+  FORM_PLACEHOLDER_NAME,
+  FORM_PLACEHOLDER_EMAIL,
+  FORM_PLACEHOLDER_TITLE,
+  FORM_PLACEHOLDER_MESSAGE,
+  FORM_BUTTON_SEND,
+  STYLE_PRIMARY_COLOR,
+  STYLE_BORDER_COLOR,
+  STYLE_TEXT_COLOR,
+  STYLE_BG_COLOR
+} from "@/constants";
 
 const FORMSPREE_ENDPOINT = `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID}`;
 
@@ -44,6 +55,10 @@ export function ContactForm() {
     }
   };
 
+  const inputClass = `flex-1 border border-${STYLE_BORDER_COLOR} bg-transparent px-3 py-2 text-${STYLE_TEXT_COLOR} placeholder:text-${STYLE_TEXT_COLOR} tracking-wider outline-none focus:border-${STYLE_PRIMARY_COLOR} transition-colors min-w-0`;
+  const textareaClass = `border border-${STYLE_BORDER_COLOR} bg-transparent px-3 py-2 text-${STYLE_TEXT_COLOR} placeholder:text-${STYLE_TEXT_COLOR} tracking-wider outline-none resize-none focus:border-${STYLE_PRIMARY_COLOR} transition-colors`;
+  const buttonClass = `w-fit border border-${STYLE_PRIMARY_COLOR} px-6 py-2 text-white tracking-wider hover:bg-${STYLE_PRIMARY_COLOR}/10 transition-colors`;
+
   return (
     <div className="flex flex-col md:flex-row gap-8 justify-between items-center w-full">
       <form
@@ -54,20 +69,20 @@ export function ContactForm() {
           <input
             type="text"
             name="name"
-            placeholder="Name"
+            placeholder={FORM_PLACEHOLDER_NAME}
             value={form.name}
             onChange={handleChange}
             required
-            className="flex-1 border border-gray-400 bg-transparent px-3 py-2 text-gray-200 placeholder:text-gray-400 tracking-wider outline-none focus:border-primary transition-colors min-w-0"
+            className={inputClass}
           />
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder={FORM_PLACEHOLDER_EMAIL}
             value={form.email}
             onChange={handleChange}
             required
-            className="flex-1 border border-gray-400 bg-transparent px-3 py-2 text-gray-200 placeholder:text-gray-400 tracking-wider outline-none focus:border-primary transition-colors min-w-0"
+            className={inputClass}
             autoComplete="email"
             style={{ backgroundColor: "transparent" }}
           />
@@ -75,27 +90,27 @@ export function ContactForm() {
         <input
           type="text"
           name="title"
-          placeholder="Title"
+          placeholder={FORM_PLACEHOLDER_TITLE}
           value={form.title}
           onChange={handleChange}
           required
-          className="border border-gray-400 bg-transparent px-3 py-2 text-gray-200 placeholder:text-gray-400 tracking-wider outline-none focus:border-primary transition-colors"
+          className={inputClass}
         />
         <textarea
           name="message"
-          placeholder="Message"
+          placeholder={FORM_PLACEHOLDER_MESSAGE}
           rows={6}
           value={form.message}
           onChange={handleChange}
           required
-          className="border border-gray-400 bg-transparent px-3 py-2 text-gray-200 placeholder:text-gray-400 tracking-wider outline-none resize-none focus:border-primary transition-colors"
+          className={textareaClass}
         />
         <div className="flex gap-5 items-center">
           <button
             type="submit"
-            className="w-fit border border-primary px-6 py-2 text-white tracking-wider hover:bg-primary/10 transition-colors"
+            className={buttonClass}
           >
-            Send
+            {FORM_BUTTON_SEND}
           </button>
           {status === "success" && (
             <Image

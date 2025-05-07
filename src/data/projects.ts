@@ -1,4 +1,36 @@
-import { PROJECT_BUTTON_GITHUB_TEXT } from "@/constants";
+import {
+  SOLOLINGO_PROJECT_DESCRIPTION,
+  SOLOLINGO_PROJECT_TECHNOLOGIES,
+  SOLOLINGO_PROJECT_BUTTON_TEXT,
+  SOLOLINGO_PROJECT_IMG_URL,
+  SOLOLINGO_PROJECT_BUTTON_LINK,
+  PORTFOLIO_PROJECT_DESCRIPTION,
+  PORTFOLIO_PROJECT_TECHNOLOGIES,
+  PORTFOLIO_PROJECT_BUTTON_TEXT,
+  PORTFOLIO_PROJECT_IMG_URL,
+  PORTFOLIO_PROJECT_BUTTON_LINK,
+  SOLOLINGO_PROJECT_SECONDARY_BUTTON_TEXT,
+  SOLOLINGO_PROJECT_SECONDARY_BUTTON_LINK,
+  COMMENT_RESCUE_AI_PROJECT_DESCRIPTION,
+  COMMENT_RESCUE_AI_PROJECT_IMG_URL,
+  COMMENT_RESCUE_AI_PROJECT_BUTTON_LINK,
+  COMMENT_RESCUE_AI_PROJECT_TECHNOLOGIES,
+  COMMENT_RESCUE_AI_PROJECT_BUTTON_TEXT,
+  COMMENT_RESCUE_AI_PROJECT_SECONDARY_BUTTON_LINK,
+  COMMENT_RESCUE_AI_PROJECT_SECONDARY_BUTTON_TEXT,
+  TRUTHIFY_AI_PROJECT_DESCRIPTION,
+  TRUTHIFY_AI_PROJECT_IMG_URL,
+  TRUTHIFY_AI_PROJECT_BUTTON_LINK,
+  TRUTHIFY_AI_PROJECT_TECHNOLOGIES,
+  TRUTHIFY_AI_PROJECT_BUTTON_TEXT,
+  TRUTHIFY_AI_PROJECT_SECONDARY_BUTTON_TEXT,
+  TRUTHIFY_AI_PROJECT_SECONDARY_BUTTON_LINK,
+  MONEYMINDER_PROJECT_DESCRIPTION,
+  MONEYMINDER_PROJECT_IMG_URL,
+  MONEYMINDER_PROJECT_BUTTON_LINK,
+  MONEYMINDER_PROJECT_TECHNOLOGIES,
+  MONEYMINDER_PROJECT_BUTTON_TEXT
+} from "@/constants";
 
 export interface Project {
   title: string;
@@ -6,56 +38,64 @@ export interface Project {
   imageUrl: string;
   projectUrl: string;
   technologies: string[];
-  buttonText: string;
+  buttonText?: string;
+  secondaryButtonText?: string;
+  secondaryProjectUrl?: string;
 }
 
 export const projects: Project[] = [
   {
+    title: "MoneyMinder",
+    description: MONEYMINDER_PROJECT_DESCRIPTION,
+    imageUrl: MONEYMINDER_PROJECT_IMG_URL,
+    projectUrl: MONEYMINDER_PROJECT_BUTTON_LINK,
+    technologies: MONEYMINDER_PROJECT_TECHNOLOGIES,
+    buttonText: MONEYMINDER_PROJECT_BUTTON_TEXT
+  },
+  {
+    title: "Sololingo",
+    description: SOLOLINGO_PROJECT_DESCRIPTION,
+    imageUrl: SOLOLINGO_PROJECT_IMG_URL,
+    projectUrl: SOLOLINGO_PROJECT_BUTTON_LINK,
+    technologies: SOLOLINGO_PROJECT_TECHNOLOGIES,
+    buttonText: SOLOLINGO_PROJECT_BUTTON_TEXT,
+    secondaryButtonText: SOLOLINGO_PROJECT_SECONDARY_BUTTON_TEXT,
+    secondaryProjectUrl: SOLOLINGO_PROJECT_SECONDARY_BUTTON_LINK
+  },
+  {
+    title: "CommentRescueAI VS Code Extension",
+    description: COMMENT_RESCUE_AI_PROJECT_DESCRIPTION,
+    imageUrl: COMMENT_RESCUE_AI_PROJECT_IMG_URL,
+    projectUrl: COMMENT_RESCUE_AI_PROJECT_BUTTON_LINK,
+    technologies: COMMENT_RESCUE_AI_PROJECT_TECHNOLOGIES,
+    buttonText: COMMENT_RESCUE_AI_PROJECT_BUTTON_TEXT,
+    secondaryButtonText: COMMENT_RESCUE_AI_PROJECT_SECONDARY_BUTTON_TEXT,
+    secondaryProjectUrl: COMMENT_RESCUE_AI_PROJECT_SECONDARY_BUTTON_LINK
+  },
+  {
+    title: "Truthify.ai",
+    description: TRUTHIFY_AI_PROJECT_DESCRIPTION,
+    imageUrl: TRUTHIFY_AI_PROJECT_IMG_URL,
+    projectUrl: TRUTHIFY_AI_PROJECT_BUTTON_LINK,
+    technologies: TRUTHIFY_AI_PROJECT_TECHNOLOGIES,
+    buttonText: TRUTHIFY_AI_PROJECT_BUTTON_TEXT,
+    secondaryButtonText: TRUTHIFY_AI_PROJECT_SECONDARY_BUTTON_TEXT,
+    secondaryProjectUrl: TRUTHIFY_AI_PROJECT_SECONDARY_BUTTON_LINK
+  },
+  {
     title: "Portfolio Website",
-    description: "A modern portfolio website built with Next.js and Tailwind CSS",
-    imageUrl: "/projects/dummy-project-image.png",
-    projectUrl: "/projects/portfolio",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
+    description: PORTFOLIO_PROJECT_DESCRIPTION,
+    imageUrl: PORTFOLIO_PROJECT_IMG_URL,
+    projectUrl: PORTFOLIO_PROJECT_BUTTON_LINK,
+    technologies: PORTFOLIO_PROJECT_TECHNOLOGIES,
+    buttonText: PORTFOLIO_PROJECT_BUTTON_TEXT
   },
-  {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with real-time inventory management",
-    imageUrl: "/projects/dummy-project-image.png",
-    projectUrl: "/projects/ecommerce",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates",
-    imageUrl: "/projects/dummy-project-image.png",
-    projectUrl: "/projects/taskmanager",
-    technologies: ["React", "Firebase", "Material UI"],
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  },
-  {
-    title: "Portfolio Website",
-    description: "A modern portfolio website built with Next.js and Tailwind CSS",
-    imageUrl: "/projects/dummy-project-image.png",
-    projectUrl: "/projects/portfolio",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  },
-  {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with real-time inventory management",
-    imageUrl: "/projects/dummy-project-image.png",
-    projectUrl: "/projects/ecommerce",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  },
-  {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates",
-    imageUrl: "/projects/dummy-project-image.png",
-    projectUrl: "/projects/taskmanager",
-    technologies: ["React", "Firebase", "Material UI"],
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  }
+  // {
+  //   title: "Task Management App",
+  //   description: "A collaborative task management application with real-time updates",
+  //   imageUrl: "/projects/dummy-project-image.png",
+  //   projectUrl: "/projects/taskmanager",
+  //   technologies: ["React", "Firebase", "Material UI"],
+  //   buttonText: PROJECT_BUTTON_GITHUB_TEXT
+  // }
 ];

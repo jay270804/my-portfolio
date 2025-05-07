@@ -20,7 +20,7 @@ export function TopicHeader({
         <span className="text-primary">#</span>
         <h2 className="text-white mr-2 tracking-wider">{topic}</h2>
         <div
-          className="h-[1.5px] bg-primary hidden md:block"
+          className={`h-[1.5px] bg-primary hidden md:block`}
           style={{ width: borderLength }}
         ></div>
       </div>

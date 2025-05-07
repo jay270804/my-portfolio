@@ -1,4 +1,23 @@
-import { PROJECT_BUTTON_GITHUB_TEXT, PROJECT_BUTTON_LIVE_TEXT } from "@/constants"
+import {
+  CUSTOM_COURSE_GENERATION_PROJECT_BUTTON_LINK,
+  CUSTOM_COURSE_GENERATION_PROJECT_BUTTON_TEXT,
+  CUSTOM_COURSE_GENERATION_PROJECT_DESCRIPTION,
+  CUSTOM_COURSE_GENERATION_PROJECT_TECHNOLOGIES,
+  MULTIMODAL_TECH_TUTOR_PROJECT_BUTTON_LINK,
+  MULTIMODAL_TECH_TUTOR_PROJECT_BUTTON_TEXT,
+  MULTIMODAL_TECH_TUTOR_PROJECT_DESCRIPTION,
+  MULTIMODAL_TECH_TUTOR_PROJECT_SECONDARY_BUTTON_LINK,
+  MULTIMODAL_TECH_TUTOR_PROJECT_SECONDARY_BUTTON_TEXT,
+  MULTIMODAL_TECH_TUTOR_PROJECT_TECHNOLOGIES,
+  THE_TWO_GOOD_COMPANY_PROJECT_BUTTON_LINK,
+  THE_TWO_GOOD_COMPANY_PROJECT_BUTTON_TEXT,
+  THE_TWO_GOOD_COMPANY_PROJECT_DESCRIPTION,
+  THE_TWO_GOOD_COMPANY_PROJECT_TECHNOLOGIES,
+  YOUTUBE_TO_MARKDOWN_PROJECT_BUTTON_LINK,
+  YOUTUBE_TO_MARKDOWN_PROJECT_BUTTON_TEXT,
+  YOUTUBE_TO_MARKDOWN_PROJECT_DESCRIPTION,
+  YOUTUBE_TO_MARKDOWN_PROJECT_TECHNOLOGIES,
+} from "@/constants";
 
 export interface SmallProject {
   title: string;
@@ -6,63 +25,39 @@ export interface SmallProject {
   technologies: string[];
   projectUrl: string;
   buttonText: string;
+  secondaryButtonText?: string;
+  secondaryProjectUrl?: string;
 }
 
 export const smallProjects: SmallProject[] = [
   {
-    title: "Bot boilerplate",
-    description: "Start creating scalable discord.js bot with typescript in seconds",
-    technologies: ["Discord.js", "TS", "JS"],
-    projectUrl: "https://github.com/example/bot-boilerplate",
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
+    title: "TheTwoGoodCompany - Immersive Animated Website",
+    description: THE_TWO_GOOD_COMPANY_PROJECT_DESCRIPTION,
+    technologies: THE_TWO_GOOD_COMPANY_PROJECT_TECHNOLOGIES,
+    projectUrl: THE_TWO_GOOD_COMPANY_PROJECT_BUTTON_LINK,
+    buttonText: THE_TWO_GOOD_COMPANY_PROJECT_BUTTON_TEXT,
   },
   {
-    title: "My blog",
-    description: "Front-end of my future blog website written in vue",
-    technologies: ["VUE", "CSS", "JS"],
-    projectUrl: "https://github.com/example/my-blog",
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
+    title: "Youtube-to-Markdown Notes AI Tool",
+    description: YOUTUBE_TO_MARKDOWN_PROJECT_DESCRIPTION,
+    technologies: YOUTUBE_TO_MARKDOWN_PROJECT_TECHNOLOGIES,
+    projectUrl: YOUTUBE_TO_MARKDOWN_PROJECT_BUTTON_LINK,
+    buttonText: YOUTUBE_TO_MARKDOWN_PROJECT_BUTTON_TEXT,
   },
   {
-    title: "Chess pro",
-    description: "Figma landing page about service for viewing chess tournaments",
-    technologies: ["Figma"],
-    projectUrl: "https://figma.com/example/chess-pro",
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
+    title: "Multimodal Tech-Tutor Chatbot",
+    description: MULTIMODAL_TECH_TUTOR_PROJECT_DESCRIPTION,
+    technologies: MULTIMODAL_TECH_TUTOR_PROJECT_TECHNOLOGIES,
+    projectUrl: MULTIMODAL_TECH_TUTOR_PROJECT_BUTTON_LINK,
+    buttonText: MULTIMODAL_TECH_TUTOR_PROJECT_BUTTON_TEXT,
+    secondaryButtonText: MULTIMODAL_TECH_TUTOR_PROJECT_SECONDARY_BUTTON_TEXT,
+    secondaryProjectUrl: MULTIMODAL_TECH_TUTOR_PROJECT_SECONDARY_BUTTON_LINK,
   },
   {
-    title: "Crash protect website",
-    description: "Figma template for website about anti-raid, anti-crash discord bot",
-    technologies: ["Figma"],
-    projectUrl: "https://figma.com/example/crash-protect",
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
+    title: "Custom course generation agent",
+    description: CUSTOM_COURSE_GENERATION_PROJECT_DESCRIPTION,
+    technologies: CUSTOM_COURSE_GENERATION_PROJECT_TECHNOLOGIES,
+    projectUrl: CUSTOM_COURSE_GENERATION_PROJECT_BUTTON_LINK,
+    buttonText: CUSTOM_COURSE_GENERATION_PROJECT_BUTTON_TEXT,
   },
-  {
-    title: "CSS experiments",
-    description: "Collection of my different little projects in css",
-    technologies: ["HTML", "CSS"],
-    projectUrl: "https://example.com/css-experiments",
-    buttonText: PROJECT_BUTTON_LIVE_TEXT
-  },
-  {
-    title: "Web Dev nvim config",
-    description: "Config for neovim perfect for web developer",
-    technologies: ["Lua", "NeoVim"],
-    projectUrl: "https://github.com/example/nvim-config",
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  },
-  {
-    title: "Ooku",
-    description: "Simple Link shortener with auth",
-    technologies: ["Python", "Quart", "HTML"],
-    projectUrl: "https://example.com/ooku",
-    buttonText: PROJECT_BUTTON_LIVE_TEXT
-  },
-  {
-    title: "School website",
-    description: "Figma template website for my school",
-    technologies: ["Figma"],
-    projectUrl: "https://figma.com/example/school-website",
-    buttonText: PROJECT_BUTTON_GITHUB_TEXT
-  }
 ];

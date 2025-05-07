@@ -8,6 +8,7 @@ import {
   ABOUT_ME_VIDEO_POSTER,
   ABOUT_ME_BUTTON_TEXT,
   ABOUT_ME_BUTTON_LINK,
+  ABOUT_ME_BIO_3,
 } from "@/constants";
 
 interface AboutMeProps {
@@ -24,6 +25,8 @@ export const AboutMe = ({ showButton = false }: AboutMeProps) => {
         <p className="text-gray-400">{ABOUT_ME_BIO_1}</p>
 
         <p className="text-gray-400">{ABOUT_ME_BIO_2}</p>
+
+        <p className="text-gray-400">{ABOUT_ME_BIO_3}</p>
 
         {showButton && (
           <Link

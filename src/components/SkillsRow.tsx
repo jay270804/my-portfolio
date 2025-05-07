@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { STYLE_PRIMARY_COLOR, STYLE_BORDER_COLOR, STYLE_TEXT_COLOR } from '@/constants';
 
 interface Skill {
   name: string;
@@ -45,11 +46,15 @@ export const SkillsRow: FC<SkillsRowProps> = ({ skills }) => {
       title: "Frameworks",
       icon: "⚙️"
     },
-    "AI": {
-      title: "AI",
+    "AI/ML": {
+      title: "AI/ML",
       icon: "🤖"
     }
   };
+
+  const cardClass = `flex-none w-[calc(50%-0.5rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)] bg-transparent border border-${STYLE_BORDER_COLOR} h-auto hover:border-${STYLE_PRIMARY_COLOR} transition-colors`;
+  const titleClass = `text-lg font-bold text-white border-b border-${STYLE_BORDER_COLOR} p-2 flex items-center`;
+  const skillClass = `text-${STYLE_TEXT_COLOR}`;
 
   return (
     <div className="w-full">
@@ -63,16 +68,16 @@ export const SkillsRow: FC<SkillsRowProps> = ({ skills }) => {
           return (
             <div
               key={category}
-              className="flex-none w-[calc(50%-0.5rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-0.75rem)] bg-transparent border border-gray-400 h-auto hover:border-primary transition-colors"
+              className={cardClass}
             >
               <div className="flex flex-col">
-                <h3 className="text-lg font-bold text-white border-b border-gray-400 p-2 flex items-center">
+                <h3 className={titleClass}>
                   <span className="mr-2 inline md:hidden">{icon}</span>
                   {title}
                 </h3>
                 <div className="p-2 flex-grow flex flex-wrap gap-2">
                   {categorySkills.map((skill) => (
-                    <span key={skill.name} className="text-gray-400">{skill.name}</span>
+                    <span key={skill.name} className={skillClass}>{skill.name}</span>
                   ))}
                 </div>
               </div>

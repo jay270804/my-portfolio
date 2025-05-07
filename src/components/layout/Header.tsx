@@ -30,8 +30,10 @@ export function Header() {
       <nav className="container mx-auto flex items-end justify-between h-16">
         {/* Brand */}
         <div className="w-1/10 font-bold tracking-tight flex items-center gap-2 mb-1">
-          <Image src={"/Brand.svg"} width={19} height={19} alt={"Brand Logo"}/>
-          <p className="font-bold text-2xl">Jay</p>
+          <Link href="/" className="flex items-center gap-2">
+            <Image src={"/Brand.svg"} width={19} height={19} alt={"Brand Logo"}/>
+            <p className="font-bold text-2xl">Jay</p>
+          </Link>
         </div>
         {/* Desktop Navigation */}
         <div className="hidden md:block">

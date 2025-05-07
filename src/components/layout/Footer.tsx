@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FOOTER_NAME, FOOTER_EMAIL, FOOTER_EMAIL_LINK, FOOTER_SUBTITLE } from "@/constants";
+import { FOOTER_NAME, FOOTER_EMAIL, FOOTER_EMAIL_LINK, FOOTER_SUBTITLE, SOCIAL_LINKS } from "@/constants";
 
 export function Footer() {
   return (
@@ -19,14 +19,11 @@ export function Footer() {
         <div className="flex flex-col items-center md:items-start gap-2 p-2">
           <span className="font-semibold text-xl text-white tracking-wider hidden md:block">Media</span>
           <div className="gap-4 hidden md:flex">
-            <a href="#" aria-label="Github">
+            <a href={SOCIAL_LINKS[0].href} aria-label="Github">
               <Image src="/Github.svg" width={30} height={30} alt="Github" className="opacity-60 hover:opacity-100 transition" />
             </a>
-            <a href="#" aria-label="LinkedIn">
+            <a href={SOCIAL_LINKS[1].href} aria-label="LinkedIn">
               <Image src="/Linkedin.svg" width={30} height={30} alt="LinkedIn" className="opacity-60 hover:opacity-100 transition" />
-            </a>
-            <a href="#" aria-label="Discord">
-              <Image src="/Discord.svg" width={30} height={30} alt="Discord" className="opacity-60 hover:opacity-100 transition" />
             </a>
           </div>
         </div>

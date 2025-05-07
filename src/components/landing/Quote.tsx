@@ -31,7 +31,7 @@ export function Quote() {
 
       {/* Author container - positioned independently */}
       <div className="absolute -bottom-10 md:-bottom-15.5 right-0">
-        <div className="border border-gray-400 min-w-[120px] md:min-w-[240px] h-[40px] md:h-[63px] flex items-center justify-center bg-transparent px-3 md:px-5 py-1 md:py-2">
+        <div className="border-t-0 border border-gray-400 min-w-[120px] md:min-w-[240px] h-[40px] md:h-[63px] flex items-center justify-center bg-transparent px-3 md:px-5 py-1 md:py-2">
           <p className="text-lg md:text-xl tracking-widest">
             - {FEATURED_QUOTE.author}
           </p>

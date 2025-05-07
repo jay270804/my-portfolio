@@ -37,8 +37,8 @@ export const Skills: FC<SkillsProps> = ({ skills }) => {
       position: "col-span-6 sm:col-span-6 md:col-span-2 md:col-start-9",
       icon: "🗃️"
     },
-    "Tools": {
-      title: "Tools",
+    "Cloud & DevOps": {
+      title: "Cloud & DevOps",
       position: "col-span-6 sm:col-span-6 md:col-span-2 md:col-start-11 ",
       icon: "🛠️"
     },
@@ -52,8 +52,8 @@ export const Skills: FC<SkillsProps> = ({ skills }) => {
       position: "col-span-6 sm:col-span-6 md:col-span-2 md:col-start-11 ",
       icon: "⚙️"
     },
-    "AI": {
-      title: "AI",
+    "AI/ML": {
+      title: "AI/ML",
       position: "col-span-6 sm:col-span-6 md:col-span-2 md:col-start-11 ",
       icon: "🤖"
     }
@@ -91,7 +91,7 @@ export const Skills: FC<SkillsProps> = ({ skills }) => {
             >
               <div className="flex flex-col">
                 <h3 className="text-lg font-bold text-white border-b border-gray-400 p-2 flex items-center">
-                  <span className="mr-2">{icon}</span>
+                  <span className="mr-2 md:hidden">{icon}</span>
                   {title}
                 </h3>
                 <div className="p-2 flex-grow flex flex-wrap gap-2">

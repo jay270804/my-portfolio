@@ -13,13 +13,14 @@ import {
   TOPIC_PROJECTS_BORDER_LENGTH,
   TOPIC_SKILLS_BORDER_LENGTH,
   TOPIC_CONTACTS_BORDER_LENGTH,
+  PROJECT_BUTTON_LINK,
 } from "@/constants";
 import { Contacts } from "@/components/landing/Contacts";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-white relative font-mira">
-      
+
       <main className="container mx-auto px-4 md:px-8 py-10 md:py-18 flex flex-col gap-20 md:gap-32">
         <Introduction />
         <div className="mx-auto">
@@ -31,6 +32,7 @@ export default function Home() {
           <TopicHeader
             topic="Projects"
             showViewAll={true}
+            viewAllLink={PROJECT_BUTTON_LINK}
             borderLength={TOPIC_PROJECTS_BORDER_LENGTH}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
@@ -65,7 +67,7 @@ export default function Home() {
             showViewAll={false}
             borderLength={TOPIC_CONTACTS_BORDER_LENGTH}
           />
-          <Contacts />
+          <Contacts showButton={true} />
         </section>
       </main>
     </div>
