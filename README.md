@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jay's Portfolio
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15, React 19, and TailwindCSS. This portfolio showcases my work, skills, and professional journey in an elegant and interactive way.
 
-First, run the development server:
+![Portfolio Preview](public/Brand.svg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- **Modern Tech Stack**: Built with Next.js 15 and React 19
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark Theme**: Sleek dark theme with custom color scheme
+- **Interactive UI**: Smooth animations and transitions
+- **Performance Optimized**: Built with performance in mind
+- **TypeScript**: Written in TypeScript for better type safety
+- **Component-Based**: Modular component architecture
+- **SEO Friendly**: Optimized for search engines
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **UI Components**:
+  - [Radix UI](https://www.radix-ui.com/)
+  - [Lucide Icons](https://lucide.dev/)
+- **Animation**: [tw-animate-css](https://www.npmjs.com/package/tw-animate-css)
+- **Utilities**:
+  - [class-variance-authority](https://cva.style/docs)
+  - [clsx](https://github.com/lukeed/clsx)
+  - [tailwind-merge](https://github.com/dcastil/tailwind-merge)
+
+## 📦 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jay270804/my-portfolio.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   cd my-portfolio
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🏗️ Project Structure
+
+```
+my-portfolio/
+├── src/
+│   ├── app/                 # Next.js app directory
+│   ├── components/         # React components
+│   │   ├── about-me/      # About section components
+│   │   ├── landing/       # Landing page components
+│   │   └── layout/        # Layout components
+│   ├── constants/         # Constants and configuration
+│   └── data/             # Static data and content
+├── public/               # Static assets
+└── ...config files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Customization
 
-## Learn More
+### Colors and Theme
+The project uses a custom color scheme defined in the Tailwind configuration. You can modify the colors in `tailwind.config.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+### Content
+Update the content in the `src/data` directory to personalize the portfolio with your information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Responsive Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The portfolio is fully responsive and optimized for:
+- Mobile devices
+- Tablets
+- Desktop screens
+- Large displays
 
-## Deploy on Vercel
+## 🔧 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a `.env` file in the root directory and add any necessary environment variables.
+Take reference from `.env.template`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👨‍💻 Author
+
+Jay - [Your GitHub Profile](https://github.com/jay270804)
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Lucide Icons](https://lucide.dev/)
