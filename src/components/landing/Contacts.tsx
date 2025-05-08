@@ -41,7 +41,7 @@ export function Contacts({
       </div>
 
       {/* Right: Contact Card */}
-      <div className={`border border-${STYLE_BORDER_COLOR} bg-transparent px-8 py-6 min-w-[270px] max-w-xs flex flex-col gap-4`}>
+      <div className={`border border-${STYLE_BORDER_COLOR} bg-transparent px-8 py-6 w-full md:min-w-[270px] md:max-w-xs flex flex-col gap-4`}>
         <h3 className="font-bold text-xl text-white tracking-wider mb-2">{CONTACTS_MESSAGE_HEADER}</h3>
         <div className={`flex items-center gap-3 text-${STYLE_TEXT_COLOR} text-lg`}>
             <Image

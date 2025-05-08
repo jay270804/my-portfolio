@@ -5,6 +5,7 @@ export const DEVELOPER_TITLE_1 = "AI/LLM enthusiast";
 export const DEVELOPER_TITLE_2 = "Full Stack developer";
 export const DEVELOPER_DESCRIPTION =
   "He crafts responsive websites where technologies meet artificial intelligence; totally not a vibe-coder :)";
+export const DEVELOPER_PICTURE_IMG_URL = "/intro-picture-outline.png";
 
 export const CONTACT_BUTTON_TEXT = "Contact me !!";
 export const CONTACT_BUTTON_LINK = "/contacts";
@@ -40,7 +41,7 @@ export const TOPIC_CONTACTS_BORDER_LENGTH = 300;
 // AboutMe section constants
 export const ABOUT_ME_GREETING = "Hello, I'm Jay!";
 export const ABOUT_ME_BIO_1 =
-  "an AI and Full Stack Engineer specializing in NLP, LLMs, and scalable system design. My passion lies in transforming complex technical challenges into elegant solutions using Python, JavaScript, and modern frameworks like FastAPI, React, and Next.js.";
+  "An AI and Full Stack Engineer specializing in NLP, LLMs, and scalable system design. My passion lies in transforming complex technical challenges into elegant solutions using Python, JavaScript, and modern frameworks like FastAPI, React, and Next.js.";
 export const ABOUT_ME_BIO_2 =
   "I've built everything from AI-powered content verification tools to productivity-enhancing VS Code extensions. With expertise in LangChain, PyTorch, and Hugging Face, I constantly explore the frontiers of AI/ML.";
 export const ABOUT_ME_BIO_3 =

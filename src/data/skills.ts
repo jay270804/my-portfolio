@@ -80,7 +80,7 @@ export const skills: Skill[] = [
   { name: "Postman", level: 5, category: "Tools" },
 
   // AI/ML (Expanded category)
-  { name: "Agentic", level: 5, category: "AI/ML" },
+  { name: "Agents", level: 5, category: "AI/ML" },
   { name: "OpenAI API", level: 4, category: "AI/ML" },
   { name: "Claude API", level: 3, category: "AI/ML" },
   { name: "Hugging Face", level: 4, category: "AI/ML" },
