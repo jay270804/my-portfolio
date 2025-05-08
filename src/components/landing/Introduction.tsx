@@ -8,7 +8,8 @@ import {
   DEVELOPER_TITLE_2,
   DEVELOPER_DESCRIPTION,
   CONTACT_BUTTON_TEXT,
-  CONTACT_BUTTON_LINK
+  CONTACT_BUTTON_LINK,
+  DEVELOPER_PICTURE_IMG_URL
 } from "@/constants";
 
 export function Introduction() {
@@ -34,7 +35,7 @@ export function Introduction() {
         {/* <Image src={"/Introduction-developer.svg" } height={386} width={469} alt="my-image"/> */}
         <div className="relative">
         <Image src={"/logo-outline.svg"} height={150} width={150} alt="logo outline" className="absolute top-17 left-4 z-0"/>
-        <Image src={"/intro-picture-1.png" } height={386} width={469} alt="my-image" className="relative z-10"/>
+        <Image src={DEVELOPER_PICTURE_IMG_URL} height={386} width={469} alt="my-image" className="relative z-10"/>
         <Image src={"/Dots.png"} height={100} width={100} alt="dots" className="absolute bottom-10 right-8 z-10"/>
         </div>
         <p className="text-md font-semibold tracking-wider border-2 h-9 w-9/10 border-gray-500 flex mx-auto gap-1.5 items-center mt-0">
