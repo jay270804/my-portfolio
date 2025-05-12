@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SocialLinks } from "@/components/landing/SocialLinks";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Jay's Portfolio",
@@ -29,6 +30,7 @@ export default function RootLayout({
         {children}
         <div className="w-full border-[0.5px] border-gray-400"></div>
         <Footer/>
+        <Analytics />
       </body>
     </html>
   );

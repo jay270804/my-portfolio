@@ -46,7 +46,7 @@ export const ABOUT_ME_BIO_2 =
   "I've built everything from AI-powered content verification tools to productivity-enhancing VS Code extensions. With expertise in LangChain, PyTorch, and Hugging Face, I constantly explore the frontiers of AI/ML.";
 export const ABOUT_ME_BIO_3 =
   "Whether optimizing backend workflows or designing innovative AI solutions, I prioritize code quality, following SOLID principles and test-driven development.";
-export const ABOUT_ME_VIDEO_PATH = "/about-me-video/about-me.mp4";
+export const ABOUT_ME_VIDEO_PATH = "/about-me-video/about-me-compressed.mp4";
 export const ABOUT_ME_VIDEO_POSTER = "/about-me-poster.jpg";
 export const ABOUT_ME_BUTTON_TEXT = "Read more →";
 export const ABOUT_ME_BUTTON_LINK = "/about-me";
